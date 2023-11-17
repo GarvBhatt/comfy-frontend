@@ -105,7 +105,7 @@ export default function PaymentMethod() {
             <div className="row">
               <div className="col-4 "> standard</div>
               <div className="col-5"> </div>
-              <div className="col-2"> ${shippingValue}</div>
+              <div className="col-2"> ₹{shippingValue}</div>
             </div>
           </div>
           <div className="row mb-4  w-100 mx-auto  ">
@@ -140,7 +140,7 @@ export default function PaymentMethod() {
           </div>
           <hr className="border" />
           <small className={`${style.gray} mt-2`}>
-            All Rights Reserved to comfy team
+            All Rights Reserved to FurniZone team
           </small>
         </div>
       </div>

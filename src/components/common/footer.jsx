@@ -65,7 +65,7 @@ const Footer = () => {
           <div className="col-lg-5 col-md-6 col-sm-12 mb-4">
             <img src={logo1} alt="" style={{ width: "9rem" }} />
             <p className="pt-4 footer-color">
-              Since 2013 we’ve been creating industrial design, residential
+              Since 2023 we've been creating industrial design, residential
               architecture, commercial interiors. Chase mice attack feet but rub
               face on everything cepteur sint occaecat cupidatat proident.
             </p>
@@ -83,7 +83,7 @@ const Footer = () => {
               <h6 className="text-light d-none d-sm-block ">Follow Us</h6>
               <div className="social-icons">
                 <Link
-                  to="https://instagram.com/comfy_store4?igshid=MzNlNGNkZWQ4Mg=="
+                  to="https://www.instagram.com/garv_616/"
                   className="me-4 link-light  hover-color-yellow"
                 >
                   <FontAwesomeIcon
@@ -92,21 +92,21 @@ const Footer = () => {
                     className="pt-2 hover-color-yellow"
                   />
                 </Link>
-                <Link to="/" className="me-4 link-light">
+                <Link to="https://www.instagram.com/garv_616/" className="me-4 link-light">
                   <FontAwesomeIcon
                     icon={faFacebookF}
                     size="lg"
                     className="hover-color-yellow"
                   />
                 </Link>
-                <Link to="/" className="me-4 link-light">
+                <Link to="https://www.instagram.com/garv_616/" className="me-4 link-light">
                   <FontAwesomeIcon
                     icon={faLinkedin}
                     size="lg"
                     className="hover-color-yellow"
                   />
                 </Link>
-                <Link to="/" className="me-4 link-light">
+                <Link to="https://www.instagram.com/garv_616/" className="me-4 link-light">
                   <FontAwesomeIcon
                     icon={faGithub}
                     size="lg"
@@ -138,7 +138,7 @@ const Footer = () => {
               </div>
               <div>
                 <p>
-                  <Link to="tel:+201003533427">
+                  <Link to="tel:+919685042748">
                     <FontAwesomeIcon
                       icon={faPhoneVolume}
                       className="text-light  pt-4 pb-2 d-block hover-color-yellow"
@@ -153,10 +153,10 @@ const Footer = () => {
 
                   <span className="contacts">
                     <Link
-                      to="tel:+201003533427"
+                      to="tel:+919685042748"
                       className=" hover-color-yellow footer-color"
                     >
-                      (+20) 1003533427
+                      (+91) 9685042748
                     </Link>
                   </span>
                 </p>
@@ -179,10 +179,10 @@ const Footer = () => {
 
                   <span className="contacts">
                     <Link
-                      to="mailto:comfyproject20@gmail.com"
+                      to="mailto:garvbhatt2085@gmail.com"
                       className=" hover-color-yellow footer-color"
                     >
-                      comfyproject20@gmail.com
+                      garvbhatt2085@gmail.com
                     </Link>
                   </span>
                 </p>
@@ -232,8 +232,8 @@ const Footer = () => {
         <hr className="footer-color" />
         <div className="col-12 col-sm pt-2 pb-3 d-flex justify-content-start justify-content-sm-center text-center footer-color">
           <h6>
-            © Copyright 2023 Comfy Store. All Rights Reserved. Design By
-            Team3-ITI
+            © Copyright 2023 FurniZone. All Rights Reserved. Design By
+            Garv and Akshita
           </h6>
         </div>
       </div>

@@ -44,6 +44,12 @@ const CartItem = ({ item, cartId, product }) => {
       setShowWarning(false);
     });
   };
+
+  let getN=(N)=>{
+    let S=N.split("\\");
+    return S[S.length-1];
+  }
+
   return (
     <tr className="w-100">
       <td className="w-25">
@@ -70,11 +76,7 @@ const CartItem = ({ item, cartId, product }) => {
               <td>
                 <img
                   src={
-                    item.product_id?.images?.[0]?.src
-                      ? process.env.REACT_APP_BASE_URL +
-                        "/" +
-                        item.product_id.images[0].src
-                      : ""
+                        "/" + getN(item.product_id.images[0].src)
                   }
                   alt={item.name}
                   className={`${style["item-img"]} `}
@@ -170,7 +172,7 @@ const CartItem = ({ item, cartId, product }) => {
       </td>
       <td>
         <strong>
-          $
+        ₹
           {(
             item?.product_id.price *
             (1 - item.product_id.discount / 100) *

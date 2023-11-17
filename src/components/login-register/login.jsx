@@ -55,7 +55,7 @@ const Login = ({ closeModal, saveUserData }) => {
       })
       .catch((error) => {
         // handle error, e.g. show error message
-        dispatch(showToast("Email or Password not correct. Please try again."));
+        dispatch(showToast(error+"Email or Password not correct. Please try again."));
 
       });
   };

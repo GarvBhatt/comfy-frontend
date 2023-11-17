@@ -9,7 +9,7 @@ const Map = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={[30.033062, 31.410398]}>
-        <Popup>Comfy store</Popup>
+        <Popup> store</Popup>
       </Marker>
     </MapContainer>
   );

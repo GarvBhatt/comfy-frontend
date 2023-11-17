@@ -131,7 +131,7 @@ function CartPage() {
                     <div className="col-3">
                       TOTAL PRICE:
                       <span className="color-yellow ps-1 fw-semibold">
-                        ${cart.totalPrice}
+                      ₹{cart.totalPrice}
                       </span>
                     </div>
                   </div>

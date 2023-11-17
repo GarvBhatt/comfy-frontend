@@ -35,7 +35,7 @@ const ContactInfo = () => {
                 </div>
                 <div className="col-md-9 col-lg-10 contact-info ">
                   <h3 className="d-block fs-5 ">Address</h3>
-                  <p> Cairo Festival City, New Cairo, Egypt </p>
+                  <p> ABCD Road, Near Shanti Bhawan, New York</p>
                 </div>
               </div>
               <hr />
@@ -46,7 +46,7 @@ const ContactInfo = () => {
                 </div>
                 <div className="col-md-9 col-lg-10 contact-info">
                   <h3 className="d-block fs-5">Phone</h3>
-                  <p>+20 1003533427</p>
+                  <p>+91 9685042748</p>
                 </div>
               </div>
               <hr />
@@ -56,7 +56,7 @@ const ContactInfo = () => {
                 </div>
                 <div className="col-md-9 col-lg-10 contact-info">
                   <h3 className="d-block fs-5">Email</h3>
-                  <p>comfyproject20@gmail.com</p>
+                  <p>garvbhatt2085@gmail.com</p>
                 </div>
               </div>
               <hr />
@@ -67,7 +67,7 @@ const ContactInfo = () => {
                 </div>
                 <div className="col-md-9 col-lg-10 contact-info">
                   <h3 className="d-block fs-5">Opening Hours</h3>
-                  <p>Sun-Sat: 8.00am - 9.00.pm</p>
+                  <p>Sun-Sat: 12:00am - 11:00.pm</p>
                 </div>
               </div>
             </div>

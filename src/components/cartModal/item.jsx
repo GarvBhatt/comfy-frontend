@@ -43,15 +43,19 @@ function Item({ item, cartId }) {
     });
   };
 
+  let getN=(N)=>{
+    let S=N.split("\\");
+    return S[S.length-1];
+  }
+
   return (
     <div className="py-2">
       <div className="row">
         <div className="col-3 pt-2">
           <img
             src={
-              process.env.REACT_APP_BASE_URL +
               "/" +
-              item?.product_id?.images[0].src
+              getN(item?.product_id?.images[0].src)
             }
             alt={item?.name}
             className=" w-100 h-70"

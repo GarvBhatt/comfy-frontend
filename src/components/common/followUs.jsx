@@ -23,36 +23,36 @@ import post6 from "../../assets/instagram/insta-6.jpg";
 import post7 from "../../assets/instagram/insta-7.jpg";
 
 const posts = [
-  { id: 0, src: post1, link: "https://www.instagram.com/comfy_store4/" },
+  { id: 0, src: post1, link: "https://www.instagram.com/garv_616/" },
   {
     id: 1,
     src: post2,
-    link: "https://www.instagram.com/p/CtzFxFTIrsG/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+    link: "https://www.instagram.com/garv_616/",
   },
   {
     id: 2,
     src: post3,
-    link: "https://www.instagram.com/p/CtzFkJMoQST/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+    link: "https://www.instagram.com/garv_616/",
   },
   {
     id: 3,
     src: post4,
-    link: "https://www.instagram.com/p/CtzGEPAocCz/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+    link: "https://www.instagram.com/garv_616/",
   },
   {
     id: 4,
     src: post5,
-    link: "https://www.instagram.com/p/CtzFWORo-Yx/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+    link: "https://www.instagram.com/garv_616/",
   },
   {
     id: 5,
     src: post6,
-    link: "https://www.instagram.com/p/CtzFFLroLTA/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+    link: "https://www.instagram.com/garv_616/",
   },
   {
     id: 6,
     src: post7,
-    link: "https://www.instagram.com/p/CtzE_D0Ir9g/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+    link: "https://www.instagram.com/garv_616/",
   },
 ];
 
@@ -99,7 +99,7 @@ const FollowUs = () => {
   return (
     <section className="insta-posts py-5 ps-3">
       <h2 className="h2 fw-bolder text-center text-capitalize mb-4 py-3 pe-3">
-        @Comfy! Follow us on Instagram
+        @FurniZone! Follow us on Instagram
       </h2>
       <div
         onMouseLeave={() => setIsMouseDown(false)}

@@ -27,7 +27,6 @@ const AddCategory = () => {
     const formData = new FormData();
     formData.append("name", values.name);
     formData.append("image", values.image);
-
     axiosInstance
       .post("/categories", formData, {
         headers: {

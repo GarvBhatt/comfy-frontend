@@ -1,4 +1,4 @@
-# [Comfy](https://comfy-frontend.vercel.app)
+# [FurniZone](https://FurniZone.com)
 ## Table of contents
 
 - [Overview](#overview)
@@ -13,7 +13,7 @@
 ## Overview
 ### About
 
-Comfy is a MERN fullstack furniture Ecommerce project that has the following features:
+FurniZone is a MERN fullstack furniture Ecommerce project that has the following features:
 
 - Regiseteration / logging-in system
 - Shopping cart
@@ -28,10 +28,6 @@ Comfy is a MERN fullstack furniture Ecommerce project that has the following fea
 ### Screenshot
 
 ![](./src/assets/readme-screenshot.png)
-
-### Links
-
-- backend repo: [link](https://github.com/Comfy-team/comfy-backend)
 
 ## Our process
 
@@ -68,9 +64,5 @@ Comfy is a MERN fullstack furniture Ecommerce project that has the following fea
 
 ## Author
 
-Comfy is an ITI graduation project built by a team of 4 aspiring developers:
-
-- [Aya Mohamed](https://github.com/Aya-Saeed261)
-- [Amal Halim](https://github.com/amallhalim)
-- [Mariam Abdallah](https://github.com/mariam-abdallah)
-- [Safaa Ibrahim](https://github.com/Safaa-Ebrahim)
+Garv Bhatt
+Akshita Mukati

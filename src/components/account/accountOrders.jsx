@@ -34,6 +34,11 @@ const AccountOrders = ({ token }) => {
     }
   }, []);
 
+  let getN=(N)=>{
+    let S=N.split("\\");
+    return S[S.length-1];
+  }
+
   return (
     <div>
       <h2 className={`${styles["text-2xl"]} ${styles.subTitle}`}>
@@ -95,9 +100,8 @@ const AccountOrders = ({ token }) => {
                                 <img
                                   className="position-absolute w-100 h-100 "
                                   src={
-                                    process.env.REACT_APP_BASE_URL +
                                     "/" +
-                                    item?.product_id?.images[0].src
+                                    getN(item?.product_id?.images[0].src)
                                   }
                                   alt="product item"
                                 />
@@ -122,7 +126,7 @@ const AccountOrders = ({ token }) => {
                                     <p
                                       className={`${styles.price} py-1 px-2 text-center`}
                                     >
-                                      $
+                                      ₹
                                       {item.price *
                                         (
                                           1 -
@@ -152,7 +156,7 @@ const AccountOrders = ({ token }) => {
                           <p
                             className={`h6 ${styles.price} py-1 px-2 text-center`}
                           >
-                            ${order.totalPrice}
+                            ₹{order.totalPrice}
                           </p>
                         </div>
                       </div>

@@ -50,6 +50,12 @@ const ProductCard = ({ product }) => {
     setInCart(productIndx === -1 ? false : true);
   }, [cart, product]);
 
+  let getN=(N)=>{
+    let S=N.split("\\");
+    return S[S.length-1];
+  }
+
+
   return (
     <div className="product-card card position-relative border-0 rounded-0">
       {outOfStock ? (
@@ -66,15 +72,15 @@ const ProductCard = ({ product }) => {
       <div className="holder position-relative overflow-hidden">
         <Link to={`/product-details/${product._id}`} className="d-block">
           <img
-            src={process.env.REACT_APP_BASE_URL + "/" + product.images[0].src}
+            src={getN(product.images[0].src)}
             alt={product.name}
             className="img-fluid card-img-top rounded-0"
           />
           <img
             src={
               product.images[1]
-                ? process.env.REACT_APP_BASE_URL + "/" + product.images[1].src
-                : process.env.REACT_APP_BASE_URL + "/" + product.images[0].src
+                ? getN(product.images[1].src)
+                : getN(product.images[0].src)
             }
             alt={product.name}
             className="img-fluid card-img-top rounded-0 hover-img position-absolute w-100 h-100 top-0 start-0"
@@ -119,18 +125,18 @@ const ProductCard = ({ product }) => {
           {product.discount > 0 ? (
             <div className="d-flex align-items-center justify-content-center gap-3">
               <span className="fw-semibold">
-                $
+              ₹
                 {(
                   product.price -
                   (product.price * product.discount) / 100
                 ).toFixed(2)}
               </span>
               <span className="color-old-price text-decoration-line-through">
-                ${product.price}
+              ₹{product.price}
               </span>
             </div>
           ) : (
-            <span className="fw-semibold">${product.price}</span>
+            <span className="fw-semibold">₹{product.price}</span>
           )}
         </div>
       </div>

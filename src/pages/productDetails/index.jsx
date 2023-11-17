@@ -35,12 +35,17 @@ const ProductDetails = () => {
       .catch((error) => console.log(error));
   }, [id]);
 
+  let getN=(N)=>{
+    let S=N.split("\\");
+    return S[S.length-1];
+  }
+
   return data ? (
     <div id="prodcut-details" className="pb-5">
       <div className="container-fluid border-bottom py-5">
         <div className="row m-0 mb-5">
           <div className="col-lg-6 col-md-6 mb-md-0 mb-4">
-            <Images imgs={data?.images} />
+            <img src={"/"+getN(data?.images[0].src.toString())} />
           </div>
           <div className="col-lg-6 col-md-6">
             <Details product={data} />
@@ -48,8 +53,8 @@ const ProductDetails = () => {
         </div>
         <FullDescription description={data?.description} name={data?.name} />
       </div>
-      <RelatedProducts data={relatedProducts} />
-      <Brands />
+      {/* <RelatedProducts data={relatedProducts} /> */}
+      {/* <Brands /> */}
       <FollowUs />
     </div>
   ) : (

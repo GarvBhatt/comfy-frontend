@@ -25,16 +25,14 @@ const DisplayingErrorMessagesSchema = Yup.object().shape({
   phone: Yup.string()
     .required("Required")
     .matches(
-      /^(\+2)?01[0-2]{1}[0-9]{8}$/,
-      "Invalid phone number. Must be an Egyptian phone number"
+      /^(\+91)?[6789]\d{9}$/,
+      "Invalid phone number. Must be an Indian phone number"
     ),
   address: Yup.object({
     city: Yup.string().required("Required").label("City"),
     street: Yup.string().label("Street").required("Required"),
-    building: Yup.number()
-      .typeError("Building must be a number")
+    building: Yup.string()
       .required("Required")
-      .min(1, "Building  can't be 0")
       .label("Building"),
     governorate: Yup.string().label("Governorate").required("Required"),
     apartment: Yup.string().label("Apartment").required("Required"),
@@ -42,8 +40,8 @@ const DisplayingErrorMessagesSchema = Yup.object().shape({
       .required("Required")
       .typeError("postalCode must be a number")
       .label("Postal Code")
-      .length(5, "Postal code must be exactly 5 digits")
-      .matches(/(?!0)[0-9]{5}/, "Postal code must not start with zero"),
+      .length(6, "Postal code must be exactly 6 digits")
+      .matches(/(?!0)[0-9]{6}/, "Postal code must not start with zero"),
     country: Yup.string(),
   }),
 });
@@ -75,7 +73,7 @@ export default function FormComonent() {
           building: user?.address?.building || "",
           city: user?.address?.city || "",
           governorate: user?.address?.governorate || "",
-          country: "Egypt",
+          country: "India",
         },
       };
     }
@@ -191,7 +189,7 @@ export default function FormComonent() {
                 type="text"
                 id="apartment"
               />
-              <label htmlFor="apartment">apartment </label>
+              <label htmlFor="apartment">House/Apartment No. </label>
               {touched.address?.apartment && errors.address?.apartment && (
                 <div className="text-danger ms-2">
                   {errors.address?.apartment}
@@ -207,7 +205,7 @@ export default function FormComonent() {
                 type="text"
                 id="building"
               />
-              <label htmlFor="building">building </label>
+              <label htmlFor="building">Locality </label>
 
               {touched.address?.building && errors.address?.building && (
                 <div className="text-danger ms-2">
@@ -224,7 +222,7 @@ export default function FormComonent() {
                 type="text"
                 id="street"
               />
-              <label htmlFor="street">street </label>
+              <label htmlFor="street">Street No. </label>
 
               {touched.address?.street && errors.address?.street && (
                 <div className="text-danger ms-2">{errors.address?.street}</div>
@@ -244,7 +242,7 @@ export default function FormComonent() {
                   <option value="" id="0" disabled className={`${style.gray} `}>
                     Country
                   </option>
-                  <option value="Egypt">Egypt </option>
+                  <option value="India">India </option>
                 </Field>
                 <label htmlFor="country">Country</label>
 
@@ -264,7 +262,7 @@ export default function FormComonent() {
                   type="text"
                 >
                   <option value="" id="0" disabled>
-                    Governorate
+                    State
                   </option>
                   {governoratesData.map(governorate => (
                     <option
@@ -278,7 +276,7 @@ export default function FormComonent() {
                 </Field>{" "}
                 <label htmlFor="postalCode">
                   {" "}
-                  <label htmlFor="postalCode">Governorate</label>
+                  <label htmlFor="postalCode">State</label>
                 </label>
                 {touched.address?.governorate &&
                   errors.address?.governorate && (
@@ -302,15 +300,6 @@ export default function FormComonent() {
                     City
                   </option>
                   {cities.map(city => {
-                    const selectedGovernorateValue =
-                      document.querySelector("#governorate")?.value;
-                    const selectedGovernorateOption = document.querySelector(
-                      `#governorate option[value="${selectedGovernorateValue}"]`
-                    );
-                    const selectedGovernorateId = selectedGovernorateOption
-                      ? selectedGovernorateOption.id
-                      : null;
-                    if (city?.governorate_id === selectedGovernorateId) {
                       return (
                         <option
                           key={city.id}
@@ -320,8 +309,6 @@ export default function FormComonent() {
                           {city.city_name_en}
                         </option>
                       );
-                    }
-                    return null;
                   })}
                 </Field>
                 <label htmlFor="city">City</label>

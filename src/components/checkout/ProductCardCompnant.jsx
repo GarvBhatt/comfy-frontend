@@ -3,6 +3,11 @@ import React from "react";
 import style from "../../pages/checkout/checkout.module.css";
 
 export default function ProductCardCompnant({ index, item }) {
+
+  let getN=(N)=>{
+    let S=N.split("\\");
+    return S[S.length-1];
+  }
   return (
     <>
       {" "}
@@ -11,11 +16,7 @@ export default function ProductCardCompnant({ index, item }) {
           <img
             className={`${style.productImg}  `}
             alt={item.name}
-            src={`${
-              process.env.REACT_APP_BASE_URL +
-              "/" +
-              item?.product_id?.images[0]?.src
-            }`}
+            src={"/"+getN(item?.product_id?.images[0].src.toString())}
           />
         </div>
         <div className={`${style.productInfo} col-7  ps-4`}>
@@ -29,13 +30,13 @@ export default function ProductCardCompnant({ index, item }) {
         </div>
         <div className="col-2 mt-3  ">
           <p className="mb-0">
-            $
+          ₹
             {item.product_id.price -
               (item.product_id.price * item.product_id.discount) / 100}
           </p>
           {item.product_id.discount !== 0 && (
             <p className={`${style.gray} mb text-decoration-line-through`}>
-              ${item.product_id.price}
+              ₹{item.product_id.price}
             </p>
           )}
         </div>
